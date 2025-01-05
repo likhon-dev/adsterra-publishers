@@ -101,7 +101,48 @@
         <script async="async" data-cfasync="false" src="//pl25032274.profitablecpmrate.com/12caf3e1b967c725bc896a6a73caf0b6/invoke.js"></script>
         <div id="container-12caf3e1b967c725bc896a6a73caf0b6"></div>
     </div>
+    <div id="apiResponse"></div>
 
+    <script>
+        // API endpoint
+        const API_ENDPOINT = "https://api.adsterratools.com/v3/publishers/statistics";
+
+        // API key from the prompt
+        const API_KEY = "4062abe6965b01ae966ce519b8766d8e";
+
+        // Optional query parameters (you can customize these)
+        const params = {
+            start_date: "2023-01-01",
+            end_date: "2023-12-31",
+            group: "day"
+        };
+
+        // Function to fetch data from the API
+        function fetchStatistics() {
+            const headers = {
+                "Authorization": `Bearer ${API_KEY}`,
+                "Content-Type": "application/json"
+            };
+
+            fetch(API_ENDPOINT, {
+                method: "GET",
+                headers: headers,
+                params: params
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the API response data on the page
+                const apiResponseDiv = document.getElementById('apiResponse');
+                apiResponseDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+
+        // Call the fetchStatistics function when the page loads
+        window.onload = fetchStatistics;
+    </script>
     <!-- Third Ad Placement -->
     <div class="ad-container">
         <script type="text/javascript">
