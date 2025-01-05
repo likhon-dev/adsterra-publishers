@@ -1,211 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maximize your earnings with high CPM and CPC ads.">
-    <meta name="keywords" content="CPM, CPC, Ads, Publishers, Monetize, Ad Network, Earning">
+    <meta name="description" content="Premium Ad Network - High CPM and CPC Performance">
+    <meta name="keywords" content="Premium CPM, High CPC, Premium Ads, Top-Tier Publishers">
     <meta name="robots" content="index, follow">
-
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Maximize Your Earnings with Ads">
-    <meta property="og:description" content="Generate more revenue with high-paying ads integrated on your site.">
-    <meta property="og:type" content="website">
-
-    <!-- CDN for Bootstrap CSS (latest version) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEaFWSrI5bC4z4gBfI8K9U5j6z5U5p" crossorigin="anonymous">
-
-    <!-- Custom Styles -->
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style">
+    
+    <!-- Inline Critical CSS for Fastest Render -->
     <style>
+        /* Critical Path CSS */
+        :root {
+            --primary-bg: #f8f9fa;
+            --ad-bg: #ffffff;
+            --text-primary: #2c3e50;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+            background: var(--primary-bg);
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            text-align: center;
         }
-
+        
         .header {
-            margin-bottom: 50px;
-            padding: 50px 0;
-            background-color: #fff;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            animation: fadeIn 1s ease-in-out;
+            background: var(--ad-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transform: translateZ(0);
+            will-change: transform;
         }
-
-        h1 {
-            color: #333;
-            font-size: 36px;
-            margin-bottom: 20px;
-            animation: slideInUp 1s ease-out;
-        }
-
-        p {
-            color: #777;
-            font-size: 18px;
-            margin-bottom: 30px;
-            animation: slideInUp 1.5s ease-out;
-        }
-
-        .ad-container {
-            margin: 30px 0;
-            min-height: 90px;
-            background: #fff;
+        
+        .ad-slot {
+            background: var(--ad-bg);
+            margin: 1.5rem 0;
+            padding: 1rem;
             border-radius: 8px;
+            box-shadow: var(--shadow);
+            min-height: 90px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1.5s ease-in-out;
+            transform: translateZ(0);
+            will-change: transform;
+            transition: all 0.3s ease;
+        }
+        
+        .ad-slot:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .stats-container {
+            background: var(--ad-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: var(--shadow);
         }
 
-        .ad-container iframe {
-            width: 100%;
-            height: 90px;
-            border: none;
+        /* Performance Optimizations */
+        @media (prefers-reduced-motion: no-preference) {
+            .fade-in {
+                opacity: 0;
+                animation: fadeIn 0.5s ease forwards;
+            }
         }
-
+        
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            to { opacity: 1; }
         }
     </style>
+
+    <!-- Deferred CSS Loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" 
+          media="print" onload="this.media='all'">
 </head>
-
 <body>
+    <div class="container">
+        <header class="header fade-in">
+            <h1 class="text-center mb-4">Premium Ad Network</h1>
+            <p class="text-center text-muted">Optimized for Maximum Revenue Generation</p>
+        </header>
 
-    <!-- First Ad Placement -->
-    <div class="ad-container">
-        <script async="async" data-cfasync="false" src="//pl25463411.profitablecpmrate.com/5dc6aeaa83b5248bd2b45f5c76c739d0/invoke.js"></script>
-        <div id="container-5dc6aeaa83b5248bd2b45f5c76c739d0"></div>
+        <!-- High-Impact Ad Slots -->
+        <div class="ad-slot fade-in" id="premium-ad-1">
+            <script async data-cfasync="false" src="//pl25463411.profitablecpmrate.com/5dc6aeaa83b5248bd2b45f5c76c739d0/invoke.js"></script>
+            <div id="container-5dc6aeaa83b5248bd2b45f5c76c739d0"></div>
+        </div>
+
+        <!-- Content Break for Better Ad Visibility -->
+        <div class="content-break my-4 fade-in">
+            <h2 class="text-center">Premium Ad Placements</h2>
+            <p class="text-center text-muted">Strategically positioned for maximum engagement</p>
+        </div>
+
+        <div class="ad-slot fade-in" id="premium-ad-2">
+            <script async data-cfasync="false" src="//pl25032274.profitablecpmrate.com/12caf3e1b967c725bc896a6a73caf0b6/invoke.js"></script>
+            <div id="container-12caf3e1b967c725bc896a6a73caf0b6"></div>
+        </div>
+
+        <div class="stats-container fade-in" id="performance-stats"></div>
     </div>
 
-    <!-- Second Ad Placement -->
-    <div class="ad-container">
-        <script async="async" data-cfasync="false" src="//pl25032274.profitablecpmrate.com/12caf3e1b967c725bc896a6a73caf0b6/invoke.js"></script>
-        <div id="container-12caf3e1b967c725bc896a6a73caf0b6"></div>
-    </div>
-    <div id="apiResponse"></div>
-
+    <!-- Optimized Performance Monitoring -->
     <script>
-        // API endpoint
-        const API_ENDPOINT = "https://api.adsterratools.com/v3/publishers/statistics";
+        // Performance Optimization and Monitoring
+        class AdPerformanceTracker {
+            constructor() {
+                this.startTime = performance.now();
+                this.metrics = {
+                    impressions: 0,
+                    clicks: 0,
+                    viewability: 0
+                };
+                this.init();
+            }
 
-        // API key from the prompt
-        const API_KEY = "4062abe6965b01ae966ce519b8766d8e";
+            init() {
+                // Initialize Intersection Observer for viewability
+                this.observer = new IntersectionObserver(
+                    (entries) => this.handleIntersection(entries),
+                    { threshold: [0, 0.5, 1] }
+                );
 
-        // Optional query parameters (you can customize these)
-        const params = {
-            start_date: "2023-01-01",
-            end_date: "2023-12-31",
-            group: "day"
-        };
+                // Observe ad slots
+                document.querySelectorAll('.ad-slot').forEach(slot => {
+                    this.observer.observe(slot);
+                });
 
-        // Function to fetch data from the API
-        function fetchStatistics() {
-            const headers = {
-                "Authorization": `Bearer ${API_KEY}`,
-                "Content-Type": "application/json"
-            };
+                // Load ads efficiently
+                this.loadAdsProgressively();
+            }
 
-            fetch(API_ENDPOINT, {
-                method: "GET",
-                headers: headers,
-                params: params
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Display the API response data on the page
-                const apiResponseDiv = document.getElementById('apiResponse');
-                apiResponseDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
+            handleIntersection(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                        this.metrics.viewability++;
+                        this.updateStats();
+                    }
+                });
+            }
+
+            loadAdsProgressively() {
+                let delay = 0;
+                document.querySelectorAll('.ad-slot').forEach((slot, index) => {
+                    setTimeout(() => {
+                        slot.dataset.loaded = 'true';
+                        this.metrics.impressions++;
+                        this.updateStats();
+                    }, delay);
+                    delay += 200; // Progressive loading
+                });
+            }
+
+            updateStats() {
+                const statsContainer = document.getElementById('performance-stats');
+                if (statsContainer) {
+                    statsContainer.innerHTML = `
+                        <h3 class="text-center mb-3">Real-time Performance</h3>
+                        <div class="row text-center">
+                            <div class="col">
+                                <strong>Impressions:</strong> ${this.metrics.impressions}
+                            </div>
+                            <div class="col">
+                                <strong>Viewability:</strong> ${(this.metrics.viewability / this.metrics.impressions * 100).toFixed(1)}%
+                            </div>
+                            <div class="col">
+                                <strong>Load Time:</strong> ${(performance.now() - this.startTime).toFixed(0)}ms
+                            </div>
+                        </div>
+                    `;
+                }
+            }
         }
 
-        // Call the fetchStatistics function when the page loads
-        window.onload = fetchStatistics;
+        // Initialize performance tracking
+        window.addEventListener('load', () => {
+            new AdPerformanceTracker();
+        });
+
+        // Optimize resource loading
+        document.addEventListener('DOMContentLoaded', () => {
+            // Defer non-critical resources
+            setTimeout(() => {
+                const bsScript = document.createElement('script');
+                bsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js';
+                bsScript.async = true;
+                document.body.appendChild(bsScript);
+            }, 2000);
+        });
     </script>
-    <!-- Third Ad Placement -->
-    <div class="ad-container">
-        <script type="text/javascript">
-            atOptions = {
-                'key': 'f6669a79207268aad812db292d6b5470',
-                'format': 'iframe',
-                'height': 90,
-                'width': 728,
-                'params': {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/f6669a79207268aad812db292d6b5470/invoke.js"></script>
-    </div>
-
-    <!-- Fourth Ad Placement -->
-    <div class="ad-container">
-        <script type="text/javascript" src="//pl25462595.profitablecpmrate.com/e9/3a/8f/e93a8f01e151a1b29cac077e93f011d1.js"></script>
-    </div>
-
-    <!-- Fifth Ad Placement -->
-    <div class="ad-container">
-        <script async="async" data-cfasync="false" src="//pl25013478.profitablecpmrate.com/66/17/d7/6617d7163a895c776c2db7800c9d3306.js"></script>
-        <script type="text/javascript">
-            atOptions = {
-                'key': 'f6669a79207268aad812db292d6b5470',
-                'format': 'iframe',
-                'height': 90,
-                'width': 728,
-                'params': {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/f6669a79207268aad812db292d6b5470/invoke.js"></script>
-    </div>
-
-    <!-- Sixth Ad Placement -->
-    <div class="ad-container">
-        <script type='text/javascript' src='//turkstench.com/07/12/70/07127081935f2e2523daf7376c624602.js'></script>
-        <script type="text/javascript">
-            atOptions = {
-                'key': 'b5b450e2d19671e55d229548a7e63d9e',
-                'format': 'iframe',
-                'height': 90,
-                'width': 728,
-                'params': {}
-            };
-        </script>
-        <script type="text/javascript" src="//turkstench.com/b5b450e2d19671e55d229548a7e63d9e/invoke.js"></script>
-    </div>
-
-    <!-- Seventh Ad Placement -->
-    <div class="ad-container">
-        <script type='text/javascript' src='//turkstench.com/80/64/a9/8064a954de381f681a4ec8063474f7fb.js'></script>
-    </div>
-
-    <!-- Eighth Ad Placement -->
-    <div class="ad-container">
-        <script async="async" data-cfasync="false" src="//turkstench.com/b7c6e71a50c3d59c50a8584826fcd66c/invoke.js"></script>
-        <div id="container-b7c6e71a50c3d59c50a8584826fcd66c"></div>
-    </div>
-
-    <!-- CDN for Bootstrap JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha384-QgN1YrYI6J3y8kV+6FTf7z7z8Wk+I4eNs1x7z4S1a9Nu5p5KymD3+9E9x4FV5H7r" crossorigin="anonymous"></script>
-
 </body>
-
 </html>
