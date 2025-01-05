@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium Ad Network - High CPM and CPC Performance">
-    <meta name="keywords" content="Premium CPM, High CPC, Premium Ads, Top-Tier Publishers">
+    <meta name="description" content="Fast Loading Premium Ad Network - High CPM and CPC Performance">
+    <meta name="keywords" content="Premium CPM, High CPC, Premium Ads, Ad Network">
     <meta name="robots" content="index, follow">
-    
-    <!-- Preload Critical Resources -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+
+    <!-- Preload Critical Resources for Performance -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style">
-    
-    <!-- Inline Critical CSS for Fastest Render -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style">
+
+    <!-- Favicon and Icons for Branding -->
+    <link rel="icon" href="https://path-to-your-favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://path-to-your-apple-touch-icon.png">
+
+    <!-- Inline Critical CSS -->
     <style>
-        /* Critical Path CSS */
         :root {
             --primary-bg: #f8f9fa;
             --ad-bg: #ffffff;
             --text-primary: #2c3e50;
             --shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -28,23 +34,13 @@
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
-        .header {
-            background: var(--ad-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
-            transform: translateZ(0);
-            will-change: transform;
-        }
-        
+
         .ad-slot {
             background: var(--ad-bg);
             margin: 1.5rem 0;
@@ -55,58 +51,35 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transform: translateZ(0);
-            will-change: transform;
             transition: all 0.3s ease;
         }
-        
+
         .ad-slot:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
-        
-        .stats-container {
-            background: var(--ad-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            box-shadow: var(--shadow);
+
+        /* Fade-in for Ad Slots */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-        /* Performance Optimizations */
-        @media (prefers-reduced-motion: no-preference) {
-            .fade-in {
-                opacity: 0;
-                animation: fadeIn 0.5s ease forwards;
-            }
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
         }
     </style>
 
-    <!-- Deferred CSS Loading -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" 
-          media="print" onload="this.media='all'">
+    <!-- Defer Non-Critical CSS Loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
     <div class="container">
-        <header class="header fade-in">
-            <h1 class="text-center mb-4">Premium Ad Network</h1>
-            <p class="text-center text-muted">Optimized for Maximum Revenue Generation</p>
-        </header>
-
         <!-- High-Impact Ad Slots -->
         <div class="ad-slot fade-in" id="premium-ad-1">
             <script async data-cfasync="false" src="//pl25463411.profitablecpmrate.com/5dc6aeaa83b5248bd2b45f5c76c739d0/invoke.js"></script>
             <div id="container-5dc6aeaa83b5248bd2b45f5c76c739d0"></div>
-        </div>
-
-        <!-- Content Break for Better Ad Visibility -->
-        <div class="content-break my-4 fade-in">
-            <h2 class="text-center">Premium Ad Placements</h2>
-            <p class="text-center text-muted">Strategically positioned for maximum engagement</p>
         </div>
 
         <div class="ad-slot fade-in" id="premium-ad-2">
@@ -114,12 +87,58 @@
             <div id="container-12caf3e1b967c725bc896a6a73caf0b6"></div>
         </div>
 
-        <div class="stats-container fade-in" id="performance-stats"></div>
+        <div class="ad-slot fade-in" id="premium-ad-3">
+            <script async data-cfasync="false" src="//pl25463412.profitablecpmrate.com/6dc7d8a9d85c194bd9a4f8b2c43d9447/invoke.js"></script>
+            <div id="container-6dc7d8a9d85c194bd9a4f8b2c43d9447"></div>
+        </div>
+
+        <div class="ad-slot fade-in" id="premium-ad-4">
+            <script async data-cfasync="false" src="//pl25463413.profitablecpmrate.com/3c3f1b7d932b564db0bce9c51c951678/invoke.js"></script>
+            <div id="container-3c3f1b7d932b564db0bce9c51c951678"></div>
+        </div>
+
+        <div class="ad-slot fade-in" id="premium-ad-5">
+            <script async data-cfasync="false" src="//pl25032275.profitablecpmrate.com/15af47b3feecfc2da12e820c3e8e9ab0/invoke.js"></script>
+            <div id="container-15af47b3feecfc2da12e820c3e8e9ab0"></div>
+        </div>
+
+        <div class="ad-slot fade-in" id="premium-ad-6">
+            <script async data-cfasync="false" src="//pl25032276.profitablecpmrate.com/50af217d7d5047419c8931d7265f12b4/invoke.js"></script>
+            <div id="container-50af217d7d5047419c8931d7265f12b4"></div>
+        </div>
+
+        <div class="ad-slot fade-in" id="premium-ad-7">
+            <script async data-cfasync="false" src="//pl25032277.profitablecpmrate.com/25e3a4d9ec7a8f1a24c79d8e625f678e/invoke.js"></script>
+            <div id="container-25e3a4d9ec7a8f1a24c79d8e625f678e"></div>
+        </div>
+
+        <!-- Performance Stats -->
+        <div id="performance-stats"></div>
     </div>
 
-    <!-- Optimized Performance Monitoring -->
+    <!-- External JS Libraries for Enhanced Performance -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
+
+    <!-- Caching Strategy and Final Ad Logic -->
     <script>
-        // Performance Optimization and Monitoring
+        // Caching Logic for High Performance
+        if ('caches' in window) {
+            caches.open('premium-ads-cache').then(cache => {
+                cache.addAll([
+                    '/index.html', // Ensure the homepage is cached
+                    '/css/style.css', // Cache the main CSS
+                    '/js/script.js' // Cache main JS
+                ]);
+            });
+        }
+
+        // Performance Optimization
         class AdPerformanceTracker {
             constructor() {
                 this.startTime = performance.now();
@@ -132,7 +151,7 @@
             }
 
             init() {
-                // Initialize Intersection Observer for viewability
+                // Initialize IntersectionObserver for lazy loading ads
                 this.observer = new IntersectionObserver(
                     (entries) => this.handleIntersection(entries),
                     { threshold: [0, 0.5, 1] }
@@ -143,7 +162,7 @@
                     this.observer.observe(slot);
                 });
 
-                // Load ads efficiently
+                // Load ads progressively
                 this.loadAdsProgressively();
             }
 
@@ -164,7 +183,7 @@
                         this.metrics.impressions++;
                         this.updateStats();
                     }, delay);
-                    delay += 200; // Progressive loading
+                    delay += 200; // Progressive loading delay
                 });
             }
 
@@ -172,16 +191,16 @@
                 const statsContainer = document.getElementById('performance-stats');
                 if (statsContainer) {
                     statsContainer.innerHTML = `
-                        <h3 class="text-center mb-3">Real-time Performance</h3>
+                        <h3 class="text-center mb-3">Ad Performance Stats</h3>
                         <div class="row text-center">
                             <div class="col">
                                 <strong>Impressions:</strong> ${this.metrics.impressions}
                             </div>
                             <div class="col">
-                                <strong>Viewability:</strong> ${(this.metrics.viewability / this.metrics.impressions * 100).toFixed(1)}%
+                                <strong>Viewability:</strong> ${this.metrics.viewability}%
                             </div>
                             <div class="col">
-                                <strong>Load Time:</strong> ${(performance.now() - this.startTime).toFixed(0)}ms
+                                <strong>Clicks:</strong> ${this.metrics.clicks}
                             </div>
                         </div>
                     `;
@@ -189,21 +208,7 @@
             }
         }
 
-        // Initialize performance tracking
-        window.addEventListener('load', () => {
-            new AdPerformanceTracker();
-        });
-
-        // Optimize resource loading
-        document.addEventListener('DOMContentLoaded', () => {
-            // Defer non-critical resources
-            setTimeout(() => {
-                const bsScript = document.createElement('script');
-                bsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js';
-                bsScript.async = true;
-                document.body.appendChild(bsScript);
-            }, 2000);
-        });
+        const adTracker = new AdPerformanceTracker();
     </script>
 </body>
 </html>
