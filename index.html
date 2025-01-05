@@ -12,13 +12,11 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style">
-<script type='text/javascript' src='//turkstench.com/fe/86/f5/fe86f51a3e0bcbcd2c654afd1c6e271e.js'></script>
+
     <!-- Favicon and Icons for Branding -->
     <link rel="icon" href="https://path-to-your-favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="https://path-to-your-apple-touch-icon.png">
-<script async="async" data-cfasync="false" src="//turkstench.com/f9cb81dcb1a15afc850f21a7d00794c5/invoke.js"></script>
-<div id="container-f9cb81dcb1a15afc850f21a7d00794c5"></div>
-    
+
     <!-- Inline Critical CSS -->
     <style>
         :root {
@@ -70,6 +68,19 @@
         .fade-in {
             animation: fadeIn 0.5s ease-in-out forwards;
         }
+
+        /* Anti-Adblock Notification */
+        .adblock-warning {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
     </style>
 
     <!-- Defer Non-Critical CSS Loading -->
@@ -77,6 +88,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
+    <!-- Anti-Adblock Warning -->
+    <div id="adblock-warning" class="adblock-warning">
+        Please disable your ad blocker to continue enjoying this site.
+    </div>
+
     <div class="container">
         <!-- High-Impact Ad Slots -->
         <div class="ad-slot fade-in" id="premium-ad-1">
@@ -94,26 +110,6 @@
             <div id="container-6dc7d8a9d85c194bd9a4f8b2c43d9447"></div>
         </div>
 
-        <div class="ad-slot fade-in" id="premium-ad-4">
-            <script async data-cfasync="false" src="//pl25463413.profitablecpmrate.com/3c3f1b7d932b564db0bce9c51c951678/invoke.js"></script>
-            <div id="container-3c3f1b7d932b564db0bce9c51c951678"></div>
-        </div>
-
-        <div class="ad-slot fade-in" id="premium-ad-5">
-            <script async data-cfasync="false" src="//pl25032275.profitablecpmrate.com/15af47b3feecfc2da12e820c3e8e9ab0/invoke.js"></script>
-            <div id="container-15af47b3feecfc2da12e820c3e8e9ab0"></div>
-        </div>
-
-        <div class="ad-slot fade-in" id="premium-ad-6">
-            <script async data-cfasync="false" src="//pl25032276.profitablecpmrate.com/50af217d7d5047419c8931d7265f12b4/invoke.js"></script>
-            <div id="container-50af217d7d5047419c8931d7265f12b4"></div>
-        </div>
-
-        <div class="ad-slot fade-in" id="premium-ad-7">
-            <script async data-cfasync="false" src="//pl25032277.profitablecpmrate.com/25e3a4d9ec7a8f1a24c79d8e625f678e/invoke.js"></script>
-            <div id="container-25e3a4d9ec7a8f1a24c79d8e625f678e"></div>
-        </div>
-
         <!-- Performance Stats -->
         <div id="performance-stats"></div>
     </div>
@@ -129,14 +125,26 @@
 
     <!-- Caching Strategy and Final Ad Logic -->
     <script>
-        // Caching Logic for High Performance
-        if ('caches' in window) {
-            caches.open('premium-ads-cache').then(cache => {
-                cache.addAll([
-                    '/index.html', // Ensure the homepage is cached
-                    '/css/style.css', // Cache the main CSS
-                    '/js/script.js' // Cache main JS
-                ]);
+        // Anti-Adblock Detection
+        function detectAdBlock() {
+            const adSlot = document.querySelector('.ad-slot');
+            if (adSlot && adSlot.offsetHeight === 0) {
+                document.getElementById('adblock-warning').style.display = 'block';
+            }
+        }
+
+        // Automatically simulate random ad clicks
+        function simulateRandomClicks() {
+            const adSlots = document.querySelectorAll('.ad-slot');
+            adSlots.forEach((slot, index) => {
+                setTimeout(() => {
+                    // Simulate click
+                    const event = new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                    });
+                    slot.dispatchEvent(event);
+                }, Math.random() * 3000); // Random delay for clicks
             });
         }
 
@@ -166,6 +174,7 @@
 
                 // Load ads progressively
                 this.loadAdsProgressively();
+                simulateRandomClicks(); // Start random ad clicks
             }
 
             handleIntersection(entries) {
@@ -199,10 +208,10 @@
                                 <strong>Impressions:</strong> ${this.metrics.impressions}
                             </div>
                             <div class="col">
-                                <strong>Viewability:</strong> ${this.metrics.viewability}%
+                                <strong>Clicks:</strong> ${this.metrics.clicks}
                             </div>
                             <div class="col">
-                                <strong>Clicks:</strong> ${this.metrics.clicks}
+                                <strong>Viewability:</strong> ${this.metrics.viewability}%
                             </div>
                         </div>
                     `;
@@ -210,7 +219,11 @@
             }
         }
 
+        // Initialize Ad Performance Tracker
         const adTracker = new AdPerformanceTracker();
+
+        // Detect adblocker
+        detectAdBlock();
     </script>
 </body>
 </html>
